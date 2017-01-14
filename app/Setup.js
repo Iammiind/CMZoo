@@ -1,18 +1,14 @@
-import React, {Component} from 'react'
-import { Text } from 'react-native'
-import { Container, Header, Content, Footer, Title } from 'native-base'
+import React, { Component } from 'react'
+import { Provider } from 'react-redux'
+import App from './App'
+import Store from './Store'
 
 export default class extends Component {
     render () {
         return (
-            <Container>
-                <Header>
-                    <Title>Native</Title>
-                </Header>
-                <Content>
-                    <Text>Test Content</Text>
-                </Content>
-            </Container>
+            <Provider store={Store()}>
+                <App />
+            </Provider>
         )
     }
 }
