@@ -27,7 +27,7 @@ class Map extends Component {
                     </MapView>
                 </View>
                 <Footer>
-                    <Button>
+                    <Button onPress={() => this.props.go({key : 'question'}, this.props.globalNav.key)}>
                         Question
                     </Button>
                 </Footer>
