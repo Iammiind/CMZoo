@@ -1,0 +1,132 @@
+{
+        "01" : {
+            "name" : "African Animal",
+            "latitude" : "18.806567",
+            "longitude" : "98.946693"
+        },
+        "02" : {
+            "name" : "NakornPing Bird Park",
+            "latitude" : "18.806087",
+            "longitude" : "98.945675"
+        },
+        "03" : {
+            "name" : "Lion",
+            "latitude" : "18.806221",
+            "longitude" : "98.945175"
+        },
+        "04" : {
+            "name" : "Leopard, Jagurd",
+            "latitude" : "18.806741",
+            "longitude" : "98.944771"
+        },
+        "05" : {
+            "name" : "Panda",
+            "latitude" : "18.805502",
+            "longitude" : "98.945602"
+        },
+        "06" : {
+            "name" : "Snowdome",
+            "latitude" : "18.806093",
+            "longitude" : "98.945694"
+        },
+        "07" : {
+            "name" : "Aquarium",
+            "latitude" : "18.804091",
+            "longitude" : "98.945602"
+        },
+        "08" : {
+            "name" : "Koala",
+            "latitude" : "18.802643",
+            "longitude" : "98.945572"
+        },
+        "09" : {
+            "name" : "Kid Water Park",
+            "latitude" : "18.802916",
+            "longitude" : "98.945976"
+        },
+        "10" : {
+            "name" : "Orangutan",
+            "latitude" : "18.804836",
+            "longitude" : "98.942459"
+        },
+        "11" : {
+            "name" : "Penguin",
+            "latitude" : "18.804939",
+            "longitude" : "98.942337"
+        },
+        "12" : {
+            "name" : "Indian Peafowl",
+            "latitude" : "18.806376",
+            "longitude" : "98.942963"
+        },
+        "13" : {
+            "name" : "Sambar, Deer",
+            "latitude" : "18.805517",
+            "longitude" : "98.943054"
+        },
+        "14" : {
+            "name" : "Reptiles",
+            "latitude" : "18.806147",
+            "longitude" : "98.942696"
+        },
+        "15" : {
+            "name" : "Gibbon Island",
+            "latitude" : "18.806858",
+            "longitude" : "98.942589"
+        },
+        "16" : {
+            "name" : "Indian Rhino",
+            "latitude" : "18.806911",
+            "longitude" : "98.942361"
+        },
+        "17" : {
+            "name" : "Riding Elephant",
+            "latitude" : "18.807061",
+            "longitude" : "98.942398"
+        },
+        "18" : {
+            "name" : "Trazan (Zipline) First Station",
+            "latitude" : "18.808403",
+            "longitude" : "98.941971"
+        },
+        "19" : {
+            "name" : "Seal Show",
+            "latitude" : "18.808421",
+            "longitude" : "98.941948"
+        },
+        "20" : {
+            "name" : "Barbary Sheep",
+            "latitude" : "18.809021",
+            "longitude" : "98.944206"
+        },
+        "21" : {
+            "name" : "Sun Bear, Asiatio Black Bear",
+            "latitude" : "18.809153",
+            "longitude" : "98.944183"
+        },
+        "22" : {
+            "name" : "Ring-tailed Lemur, Lemur",
+            "latitude" : "18.808761",
+            "longitude" : "98.944893"
+        },
+        "23" : {
+            "name" : "Elephant",
+            "latitude" : "18.807661",
+            "longitude" : "98.946022"
+        },
+        "24" : {
+            "name" : "Australian Animal",
+            "latitude" : "18.807188",
+            "longitude" : "98.948601"
+        },
+        "25" : {
+            "name" : "Hippopotamus",
+            "latitude" : "18.808056",
+            "longitude" : "98.946388"
+        },
+        "26" : {
+            "name" : "Mr.Young's Garden",
+            "latitude" : "18.808315",
+            "longitude" : "98.946931"
+        }
+}
