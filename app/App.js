@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import { NavigationExperimental } from 'react-native'
 import { connect } from 'react-redux'
-import { View ,StatusBar, Text } from 'react-native'
+import { View, StatusBar } from 'react-native'
 
 // Components
 import Map from './components/Map'
@@ -61,5 +61,5 @@ const mapStateToProps = (state) => ({
 })
 
 export default connect(
-    mapStateToProps
+    mapStateToProps,
 )(App)

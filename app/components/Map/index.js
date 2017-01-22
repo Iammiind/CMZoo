@@ -11,7 +11,7 @@ import NormalMarker from './NormalMarker'
 
 import initial from '../../data/initial.json'
 import markers from '../../data/locations.json'
-
+Object.keys(markers).forEach((keyMap) => markers[keyMap].color = randomMC.getColor({shades: ['800', '900']}))
 
 
 
@@ -19,8 +19,9 @@ import markers from '../../data/locations.json'
 const { pushRoute } = actions;
 
 class Map extends Component {
+
     render () {
-        this.markerNodes = {}
+        
         return (
             <Container>
                 <View style={styles.container}>
@@ -34,15 +35,24 @@ class Map extends Component {
                                 longitudeDelta: parseFloat(initial.longitudeDelta)
                             }
                         }
+                        loadingEnabled={true}
+                        // onMarkerPress={() => alert('onMarkerPress')}
+                        // onMarkerSelect={() => alert('onMarkerSelect')}
+                        // onMarkerDeselect={() => alert('onMarkerDeselect')}
+                        // onCalloutPress={() => alert('onCalloutPress')}
+                        // onMarkerDragStart={() => alert('onMarkerDragStart')}
+                        // onMarkerDrag={() => alert('onMarkerDrag')}
+                        // onMarkerDragEnd={() => alert('onMarkerDragEnd')}
                     >
                         {
                             Object.keys(markers).map((keyMap) => (
                                    <NormalMarker
                                         latitude = { parseFloat(markers[keyMap].latitude) } 
                                         longitude = { parseFloat(markers[keyMap].longitude) }
-                                        color = { randomMC.getColor({shades: ['800', '900']}) }
+                                        color = { markers[keyMap].color }
                                         name = { markers[keyMap].name }
                                         key = { keyMap }
+                                        go = { () => this.props.go({key : 'question'}, this.props.globalNav.key) }
                                     />
                             ))
                         }
