@@ -13,6 +13,11 @@ const {
 
 class App extends Component {
 
+    constructor() {
+        super()
+        this.__renderScene.bind(this)
+    }
+
     __renderStatusBar(route) {
         switch (route.scene.route.key) {
             case 'map' :
@@ -31,6 +36,13 @@ class App extends Component {
     }
 
     __renderScene(route) {
+        if (!this.props.appState.question) {
+            return <Question />
+        }
+        return this.__selectScene(route)
+    }
+
+    __selectScene(route) {
         switch (route.scene.route.key) {
             case 'map' :
                 return <Map />
@@ -57,6 +69,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
+    appState : state.appState,
     globalNav: state.globalNav
 })
 
