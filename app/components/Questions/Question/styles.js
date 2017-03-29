@@ -1,18 +1,18 @@
 import { StyleSheet } from 'react-native'
-import { lightBlue } from 'material-colors'
+import { lightGreen } from 'material-colors'
 
 export default StyleSheet.create({
     viewQuestion : {
         flex : 0,
-        backgroundColor: lightBlue['900'],
-        paddingTop: 50,
-        paddingBottom : 30,
+        backgroundColor: lightGreen['900'],
+        paddingTop: 60,
+        paddingBottom : 50,
         paddingLeft : 30,
         paddingRight : 30
     },
     textQuestion : {
         color : '#FFF',
-        fontSize : 35,
+        fontSize : 37,
         textAlign : 'center'
     },
     viewAnswer : {

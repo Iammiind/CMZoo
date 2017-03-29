@@ -5,8 +5,7 @@ const initialState = {
     index: 0,
     routes: [
         {
-            key: 'map',
-            barStyle : 'dark-content'
+            key: 'map'
         },
     ]
 }

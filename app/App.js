@@ -1,53 +1,50 @@
 import React, { Component } from 'react'
 import { NavigationExperimental } from 'react-native'
 import { connect } from 'react-redux'
+import { actions } from 'react-native-navigation-redux-helpers' //action creator
 import { View, StatusBar } from 'react-native'
 
 // Components
 import Map from './components/Map'
-import Question from './components/Question'
+import Questions from './components/Questions'
 
 const {
     CardStack: NavigationCardStack
 } = NavigationExperimental
 
+const {
+    pushRoute
+} = actions
+
 class App extends Component {
 
-    constructor() {
-        super()
-        this.__renderScene.bind(this)
+    componentDidMount () {
+        if (!this.props.appState.question) {
+            this.props.go({ key : 'question' }, this.props.globalNav.key)
+        }
     }
 
     __renderStatusBar(route) {
+        let barStyle;
         switch (route.scene.route.key) {
             case 'map' :
-                return <StatusBar
-                    barStyle="dark-content"
-                />
+                barStyle = 'dark-content'
+                break
             case 'question' :
-                return <StatusBar
-                    barStyle="light-content"
-                />
+                barStyle = 'light-content'
+                break
             default :
-                return <StatusBar
-                    barStyle="dark-content"
-                />
+                barStyle = 'dark-content'
         }
+        return <StatusBar barStyle={barStyle} />
     }
 
     __renderScene(route) {
-        if (!this.props.appState.question) {
-            return <Question />
-        }
-        return this.__selectScene(route)
-    }
-
-    __selectScene(route) {
         switch (route.scene.route.key) {
             case 'map' :
                 return <Map />
             case 'question' :
-                return <Question />
+                return <Questions />
             default :
                 return <Map />
         }
@@ -57,12 +54,12 @@ class App extends Component {
         return (
             <NavigationCardStack
                 navigationState={this.props.globalNav}
-                renderScene={(route) => ((
+                renderScene={(route) => (
                     <View style={{flex : 1}}>
-                       { this.__renderStatusBar(route) }
-                       { this.__renderScene(route) }
+                        {this.__renderStatusBar(route)}
+                        {this.__renderScene(route)}
                     </View>
-                ))}
+                )}
             />
         )
     }
@@ -75,4 +72,5 @@ const mapStateToProps = (state) => ({
 
 export default connect(
     mapStateToProps,
+    { go : pushRoute }
 )(App)

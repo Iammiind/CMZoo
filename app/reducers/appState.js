@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
         case SET_QUESTION :
             return {
                 ...state,
-                question : action.question
+                question : action.state
             }
         default :
             return state
